@@ -10,6 +10,7 @@ if [ $# -lt 1 ]; then
   exit 1
 fi
 
+
 TARGET_DIR="$1"
 EXT_FILTER="${2:-txt}"  # Default to txt if not provided
 LOG_FILE="logs/output.log"

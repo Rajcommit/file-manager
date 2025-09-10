@@ -1,0 +1,10 @@
+
+---
+
+### ✅ `.gitignore`
+
+```gitignore
+logs/*
+!logs/.gitkeep
+*.swp
+*.bak

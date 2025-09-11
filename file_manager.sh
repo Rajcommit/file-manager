@@ -85,4 +85,4 @@ cd "$start_dir"
 
 echo "Returned to $start_dir" >> "$LOG_FILE"
 echo "End Time: $(date)" >> "$LOG_FILE"
-echo "✅ Task Completed Successfully" >> "$LOG_FILE"
+echo " Task Completed Successfully" >> "$LOG_FILE"

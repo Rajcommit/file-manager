@@ -13,18 +13,23 @@ fi
 
 TARGET_DIR="$1"
 EXT_FILTER="${2:-txt}"  # Default to txt if not provided
-LOG_FILE="logs/output.log"
-ERROR_FILE="logs/error.log"
+# Strip a leading dot from the extension, if present
+EXT_FILTER="${EXT_FILTER#.}"
+
+start_dir=$(pwd)
+
+LOG_DIR="$start_dir/logs"
+LOG_FILE="$LOG_DIR/output.log"
+ERROR_FILE="$LOG_DIR/error.log"
+
+# Create log directory if it doesn't exist
+mkdir -p "$LOG_DIR"
 
 # ========== 2. Logging Start ==========
 echo "========== File Manager Run ==========" > "$LOG_FILE"
 echo "Target Directory: $TARGET_DIR" >> "$LOG_FILE"
 echo "File Extension Filter: *.$EXT_FILTER" >> "$LOG_FILE"
 echo "Start Time: $(date)" >> "$LOG_FILE"
-
-
-# ========== 3. Save Current Directory ==========
-start_dir=$(pwd)
 
 
 # ========== 4. Change to Target Directory ==========

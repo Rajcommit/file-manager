@@ -20,3 +20,10 @@ This project is a simple Bash script that demonstrates:
 
 ```bash
 ./file_manager.sh <directory> [file_extension]
+```
+
+The script automatically creates a `logs/` directory and stores its standard
+output in `logs/output.log` and errors in `logs/error.log`. Provide the target
+directory and optional file extension (with or without the leading dot) to
+filter files.
+
